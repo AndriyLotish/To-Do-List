@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16"  href="img/favicon-16x16.png"/>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <title>ToDo list</title>
+  </head>
+  <body>
+    <div class="conteiner">
+      <div class="modal">
+        <div class="modal__wrapper">
+          <div class="modal__header">
+            <h3>
+              Are you sure you want to delete task "<span class="demo"></span>"
+            </h3>
+          </div>
+          <div class="modal__footer">
+            <button class="modal__yes">Yes</button>
+            <button class="modal__no" onclick="closeModal()">No</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <h2>Task list</h2>
+
+        <div class="all__done">
+          <div>🎊</div>
+          <div class="all__done-done">All done!</div>
+        </div>
+
+        <div class="no__tasks">You don't have tasks to do.</div>
+
+        <div class="tasks"></div>
+        <div class="tasks__new">
+          <input
+            id="new-task"
+            type="text"
+            placeholder="New task..."
+            class="task__new-input"
+          />
+        </div>
+
+        <div class="percent__work">
+          <div class="hr"></div>
+          <div class="task__line">
+            <span class="complete"></span>
+            <span class="incomplete"></span>
+            (
+            <span class="percent black red yellow green"></span>
+            <span class="done">done</span>
+            )
+          </div>
+        </div>
+
+        <div class="tasks__done"></div>
+      </div>
+    </div>
+
+    <footer class="copyright">
+      <p>
+        &copy; 2019
+        <a href="https://digitalidea.studio/" target="_blank">Digital Idea</a>
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
